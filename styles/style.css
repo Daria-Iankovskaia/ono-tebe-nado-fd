@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  min-height: 293px;
   padding: 92px 50px 96px;
 }
 
@@ -53,9 +52,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.address__header {
   justify-self: end;
   max-width: 240px;
-  padding-bottom: 5px;
 }
 
 .address__text {
@@ -63,9 +64,6 @@
   font-weight: 400;
   font-style: normal;
   line-height: 24px;
-}
-
-.contacts {
   text-underline-offset: 4px;
   text-decoration-thickness: 1px;
 }
@@ -84,7 +82,7 @@
 
 .overlay {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   height: 100%;
   width: 100%;
   z-index: 0;
@@ -135,7 +133,6 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1000px;
-  min-height: 51px;
 }
 
 .cover__description-text {
@@ -147,7 +144,7 @@
   word-spacing: 17px;
   z-index: 1;
   letter-spacing: 0.2px;
-  white-space: nowrap;
+  max-width: 637px;
 }
 
 .bet-button {
@@ -306,27 +303,24 @@
   margin-bottom: 100px;
 }
 
+.description__block {
+  grid-column: 2;
+  grid-row: 2;
+  max-width: 693px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .about__text {
   color: #000000;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
-  margin-bottom: 30px;
 }
 
-.description__block {
-  grid-column: 2;
-  grid-row: 2;
-  max-width: 693px;
-}
-
-.about_text_first_item {
+.about_text_distance {
   padding-right: 5px;
-  margin-bottom: 24px;
-}
-
-.word__distance {
-  padding-right: 6px;
 }
 
 .footer {
@@ -334,15 +328,12 @@
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
   justify-items: center;
-  min-height: 180px;
   padding-left: 50px;
   padding-right: 50px;
+  padding-bottom: 82px;
 }
 
 .footer__address {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   justify-self: start;
   max-width: 265px;
 }
@@ -352,6 +343,10 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.footer__menu-list-item {
+  list-style: none;
 }
 
 .footer__menu-link {
@@ -365,10 +360,6 @@
 
 .footer__menu-link_active {
   text-decoration: none;
-}
-
-.footer__menu-list-item {
-  list-style: none;
 }
 
 .footer__social-list {
